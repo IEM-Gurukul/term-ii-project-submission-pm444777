@@ -1,17 +1,25 @@
 package model;
 
-public class Person {
-  protected String name;
-  protected int age;
+public abstract class Person {
 
-public Person(String name, int age)
-  {
-    this.name=name;
-    this.age=age;
-  }
-  public void displayInfo()
-  {
-    System.out.println("Name: "+ name);
-    System.out.println("Age: "+age);
-  }
-  
+    private String name;
+    private int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    // Abstract method (forces subclasses to implement)
+    public abstract void displayInfo();
+}
