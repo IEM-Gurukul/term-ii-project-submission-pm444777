@@ -1,70 +1,116 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pG3gvzt-)
 # PCCCS495 – Term II Project
 
 ## Project Title
 
 Hospital Appointment Management System
 
-## Problem Statement (max 150 words)
+---
 
-Hospitals and clinics often manage appointments manually or using simple record systems that are difficult to organize and maintain. When multiple patients need to schedule appointments with different doctors, manual systems can lead to scheduling conflicts, lost records, and inefficient management of patient information.
+## Problem Statement 
 
-The proposed Hospital Appointment Management System aims to provide a simple software-based solution for managing patient registrations, doctor information, and appointment scheduling. By applying object-oriented programming principles in Java, the system models real-world entities such as patients, doctors, and appointments as separate classes. This approach improves code organization, modularity, and maintainability while demonstrating practical implementation of core OOP concepts.
+Hospitals and clinics often manage appointments manually or using simple record systems that are difficult to organize and maintain. When multiple patients need to schedule appointments with different doctors, manual systems can lead to scheduling conflicts, misplaced records, and inefficient handling of patient data.
+
+The Hospital Appointment Management System provides a simple software-based solution to manage patient and doctor information in a structured way. Using object-oriented programming in Java, the system models real-world entities such as patients, doctors, and appointments as separate classes. This improves code organization, modularity, and maintainability.
+
+---
 
 ## Target User
 
-The system is designed for:
-
 • Small hospitals and clinics
 • Reception staff responsible for appointment booking
-• Doctors who need quick access to patient appointment details
-• Administrators managing patient and doctor records
+• Doctors who need quick access to patient details
+• Administrators managing records
+
+---
 
 ## Core Features
 
 • Register and store patient information
 • Store and manage doctor details
-• Schedule appointments between patients and doctors
-• Display appointment schedules
-• Search for patients or doctors in the system
-• Prevent invalid data entries using exception handling
-• Maintain lists of patients, doctors, and appointments using Java collections
+• Display list of patients and doctors
+• View appointment-related data
+• Menu-driven user interface
+• Input validation using exception handling
+• Use of Java Collections (ArrayList) for data storage
 
+---
 
 ## OOP Concepts Used
 
-✔ Inheritance
-A base class Person will be extended by subclasses Patient and Doctor.
+✔ **Abstraction**
+Implemented using abstract class `Person`.
 
-✔ Polymorphism
-Methods such as displayDetails() will behave differently for Patient and Doctor classes.
+✔ **Inheritance**
+`Patient` and `Doctor` classes extend `Person`.
 
-✔ Abstraction
-The base class Person will define common attributes and behavior shared by different types of users.
+✔ **Polymorphism**
+Method `displayInfo()` is overridden in subclasses.
 
-✔ Exception Handling
-Try-catch blocks will handle invalid input and runtime errors.
+✔ **Encapsulation**
+Private data members with public getter methods.
 
-✔ Collections
-Java collections such as ArrayList will store patient records, doctor records, and appointments.
+✔ **Exception Handling**
+Used to handle invalid inputs.
 
+✔ **Collections**
+ArrayList is used to store and manage data dynamically.
+
+---
 
 ## Proposed Architecture Description
 
-The system follows a simple object-oriented architecture consisting of entity classes and a management layer.
+The system follows a modular object-oriented design.
 
-The Person abstract class defines common attributes such as name and ID. Two subclasses, Patient and Doctor, inherit from this class and add their own specific attributes.
+The abstract class `Person` defines common attributes such as name and age. The `Patient` and `Doctor` classes extend this class and include their own specific attributes.
 
-An Appointment class represents the relationship between a patient and a doctor along with appointment details such as date and time.
+The `Appointment` class represents the relationship between a patient and a doctor.
 
-A central HospitalManager class handles the core operations of the system, including adding patients, adding doctors, scheduling appointments, and displaying stored data. Java collections are used to store and manage objects dynamically.
+The `HospitalManager` class acts as the core logic handler and manages all operations such as adding patients, adding doctors, and displaying data using ArrayList.
 
-The Main class provides a menu-driven interface that allows users to interact with the system and perform various operations.
+The `Main` class provides a menu-driven interface for user interaction.
 
+---
 
 ## How to Run
 
+1. Open terminal in the project folder
+2. Navigate to src folder:
 
+   ```
+   cd src
+   ```
+3. Compile the program:
 
-## Git Discipline Notes
-Minimum 10 meaningful commits required.
+   ```
+   javac model\Person.java model\Patient.java model\Doctor.java model\Appointment.java service\HospitalManager.java Main.java
+   ```
+4. Run the program:
+
+   ```
+   java Main
+   ```
+
+---
+
+## Git Commits
+
+The project follows proper Git discipline with multiple meaningful commits such as:
+
+• Initial project setup
+• Added Person abstract class
+• Added Patient class
+• Added Doctor class
+• Added Appointment class
+• Created service package
+• Added HospitalManager class
+• Fixed folder structure
+• Added Main class
+• Improved README documentation
+
+All commits were pushed before the deadline as per guidelines.
+
+---
+
+## Author
+
+Parboni Mitra
